@@ -1,0 +1,42 @@
+<section id="pieces" class="py-16 md:py-24 bg-slate-50 scroll-mt-20">
+  <div class="container-app">
+    <div class="flex flex-col items-center text-center">
+      <span class="badge bg-primary-100 text-primary-700">Service 2</span>
+      <h2 class="section-title mt-4">Pièces Détachées &amp; Accessoires</h2>
+      <p class="section-subtitle text-center">
+        Vente de pièces détachées et accessoires de qualité, avec possibilité d'installation
+        et de montage directement sur place par notre équipe.
+      </p>
+    </div>
+
+    <!-- Category filter -->
+    <div class="mt-10 flex flex-wrap justify-center gap-2">
+      @for (cat of categories; track cat) {
+        <button
+          type="button"
+          (click)="selectCategory(cat)"
+          class="rounded-full px-4 py-2 text-sm font-medium border transition-colors"
+          [class.bg-primary-600]="selectedCategory === cat"
+          [class.text-white]="selectedCategory === cat"
+          [class.border-primary-600]="selectedCategory === cat"
+          [class.bg-white]="selectedCategory !== cat"
+          [class.text-slate-600]="selectedCategory !== cat"
+          [class.border-slate-200]="selectedCategory !== cat"
+        >
+          {{ cat }}
+        </button>
+      }
+    </div>
+
+    <!-- Parts grid -->
+    @if (parts.length > 0) {
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        @for (part of parts; track part.id) {
+          <app-part-card [part]="part" />
+        }
+      </div>
+    } @else {
+      <p class="mt-10 text-center text-slate-500">Aucun produit dans cette catégorie.</p>
+    }
+  </div>
+</section>
