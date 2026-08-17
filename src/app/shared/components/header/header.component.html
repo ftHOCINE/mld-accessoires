@@ -1,4 +1,4 @@
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-100 shadow-sm">
+<header class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur border-b border-white/10 shadow-sm">
   <div class="container-app">
     <div class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
@@ -7,8 +7,8 @@
           M
         </div>
         <div class="leading-tight">
-          <p class="font-extrabold text-lg text-dark-900 tracking-tight">MLD ACCESSOIRES</p>
-          <p class="text-[11px] text-slate-500 hidden sm:block">Location & Pièces Auto</p>
+          <p class="font-extrabold text-lg text-white tracking-tight">MLD ACCESSOIRES</p>
+          <p class="text-[11px] text-slate-400 hidden sm:block">Location & Pièces Auto</p>
         </div>
       </a>
 
@@ -17,7 +17,7 @@
         @for (link of navLinks; track link.fragment) {
           <a
             [href]="'#' + link.fragment"
-            class="text-sm font-medium text-slate-700 hover:text-primary-600 transition-colors"
+            class="text-sm font-medium text-slate-300 hover:text-primary-500 transition-colors"
           >
             {{ link.label }}
           </a>
@@ -42,7 +42,7 @@
       <!-- Mobile burger -->
       <button
         type="button"
-        class="lg:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg text-dark-900 hover:bg-slate-100"
+        class="lg:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg text-white hover:bg-white/10"
         (click)="toggleMenu()"
         [attr.aria-expanded]="isMenuOpen"
         aria-label="Ouvrir le menu"
@@ -62,13 +62,13 @@
 
   <!-- Mobile menu -->
   @if (isMenuOpen) {
-    <div class="lg:hidden border-t border-slate-100 bg-white">
+    <div class="lg:hidden border-t border-white/10 bg-dark-900">
       <nav class="container-app py-4 flex flex-col gap-1">
         @for (link of navLinks; track link.fragment) {
           <a
             [href]="'#' + link.fragment"
             (click)="closeMenu()"
-            class="px-3 py-3 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary-600"
+            class="px-3 py-3 rounded-lg text-base font-medium text-slate-300 hover:bg-white/5 hover:text-primary-500"
           >
             {{ link.label }}
           </a>

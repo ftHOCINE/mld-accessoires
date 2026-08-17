@@ -1,4 +1,4 @@
-<section id="location" class="py-16 md:py-24 bg-white scroll-mt-20">
+<section id="location" class="py-16 md:py-24 bg-dark-900 scroll-mt-20">
   <div class="container-app">
     <div class="flex flex-col items-center text-center">
       <span class="badge bg-primary-100 text-primary-700">Service 1</span>
@@ -10,13 +10,13 @@
     </div>
 
     <!-- Filters -->
-    <div class="mt-10 flex flex-wrap items-center justify-center gap-3 bg-slate-50 rounded-2xl p-4">
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-3 bg-dark-800 border border-dark-700 rounded-2xl p-4">
       <div class="flex flex-col">
-        <label class="text-xs font-medium text-slate-500 mb-1">Catégorie</label>
+        <label class="text-xs font-medium text-slate-400 mb-1">Catégorie</label>
         <select
           [(ngModel)]="selectedCategory"
           (ngModelChange)="applyFilters()"
-          class="rounded-lg border-slate-200 text-sm focus:border-primary-500 focus:ring-primary-500"
+          class="rounded-lg bg-dark-900 border-dark-700 text-slate-200 text-sm focus:border-primary-500 focus:ring-primary-500"
         >
           @for (cat of categories; track cat) {
             <option [value]="cat">{{ cat }}</option>
@@ -25,11 +25,11 @@
       </div>
 
       <div class="flex flex-col">
-        <label class="text-xs font-medium text-slate-500 mb-1">Prix maximum / jour</label>
+        <label class="text-xs font-medium text-slate-400 mb-1">Prix maximum / jour</label>
         <select
           [(ngModel)]="selectedMaxPrice"
           (ngModelChange)="applyFilters()"
-          class="rounded-lg border-slate-200 text-sm focus:border-primary-500 focus:ring-primary-500"
+          class="rounded-lg bg-dark-900 border-dark-700 text-slate-200 text-sm focus:border-primary-500 focus:ring-primary-500"
         >
           <option [ngValue]="0">Tous les prix</option>
           @for (price of maxPriceOptions; track price) {
@@ -51,7 +51,7 @@
         }
       </div>
     } @else {
-      <p class="mt-10 text-center text-slate-500">Aucun véhicule ne correspond à ces critères.</p>
+      <p class="mt-10 text-center text-slate-400">Aucun véhicule ne correspond à ces critères.</p>
     }
   </div>
 </section>

@@ -3,18 +3,18 @@
     <img [src]="car.imageUrl" [alt]="car.brand + ' ' + car.model" class="h-48 w-full object-cover" loading="lazy" />
     <span
       class="badge absolute top-3 left-3"
-      [ngClass]="car.available ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'"
+      [ngClass]="car.available ? 'bg-green-900/60 text-green-300' : 'bg-red-900/60 text-red-300'"
     >
       {{ car.available ? 'Disponible' : 'Indisponible' }}
     </span>
-    <span class="badge absolute top-3 right-3 bg-white/90 text-dark-900">{{ car.category }}</span>
+    <span class="badge absolute top-3 right-3 bg-dark-900/80 text-white">{{ car.category }}</span>
   </div>
 
   <div class="p-5 flex flex-col flex-1">
-    <h3 class="text-lg font-bold text-dark-900">{{ car.brand }} {{ car.model }}</h3>
-    <p class="text-sm text-slate-500 mt-1">{{ car.description }}</p>
+    <h3 class="text-lg font-bold text-white">{{ car.brand }} {{ car.model }}</h3>
+    <p class="text-sm text-slate-400 mt-1">{{ car.description }}</p>
 
-    <div class="mt-4 grid grid-cols-2 gap-2 text-sm text-slate-600">
+    <div class="mt-4 grid grid-cols-2 gap-2 text-sm text-slate-300">
       <div class="flex items-center gap-1.5">
         <svg class="h-4 w-4 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
@@ -35,10 +35,10 @@
       </div>
     </div>
 
-    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+    <div class="mt-5 pt-4 border-t border-dark-700 flex items-center justify-between">
       <div>
-        <p class="text-xl font-extrabold text-dark-900">{{ car.pricePerDay | number }} DA</p>
-        <p class="text-xs text-slate-500">par jour</p>
+        <p class="text-xl font-extrabold text-white">{{ car.pricePerDay | number }} DA</p>
+        <p class="text-xs text-slate-400">par jour</p>
       </div>
       <a
         [href]="reserveLink"

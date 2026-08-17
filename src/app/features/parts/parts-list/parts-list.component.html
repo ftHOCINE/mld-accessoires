@@ -1,4 +1,4 @@
-<section id="pieces" class="py-16 md:py-24 bg-slate-50 scroll-mt-20">
+<section id="pieces" class="py-16 md:py-24 bg-dark-900 scroll-mt-20">
   <div class="container-app">
     <div class="flex flex-col items-center text-center">
       <span class="badge bg-primary-100 text-primary-700">Service 2</span>
@@ -19,9 +19,9 @@
           [class.bg-primary-600]="selectedCategory === cat"
           [class.text-white]="selectedCategory === cat"
           [class.border-primary-600]="selectedCategory === cat"
-          [class.bg-white]="selectedCategory !== cat"
-          [class.text-slate-600]="selectedCategory !== cat"
-          [class.border-slate-200]="selectedCategory !== cat"
+          [class.bg-dark-800]="selectedCategory !== cat"
+          [class.text-slate-300]="selectedCategory !== cat"
+          [class.border-dark-700]="selectedCategory !== cat"
         >
           {{ cat }}
         </button>
@@ -36,7 +36,7 @@
         }
       </div>
     } @else {
-      <p class="mt-10 text-center text-slate-500">Aucun produit dans cette catégorie.</p>
+      <p class="mt-10 text-center text-slate-400">Aucun produit dans cette catégorie.</p>
     }
   </div>
 </section>
