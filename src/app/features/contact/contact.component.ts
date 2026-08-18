@@ -14,7 +14,7 @@ export class ContactComponent {
   mapsEmbedUrl: SafeResourceUrl;
 
   constructor(public store: StoreService, private sanitizer: DomSanitizer) {
-    const rawUrl = `https://www.google.com/maps?q=${encodeURIComponent(this.store.info.address)}&output=embed`;
+    const rawUrl = `https://www.google.com/maps?q=${encodeURIComponent(this.store.info.mapsQuery)}&output=embed`;
     this.mapsEmbedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(rawUrl);
   }
 }
