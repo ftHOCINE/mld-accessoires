@@ -6,6 +6,9 @@
 /out-tsc
 /bazel-out
 
+# Generated from /data/*.xlsx by scripts/generate-data.mjs (run `npm run generate:data`)
+/src/app/core/data/*.generated.ts
+
 # Node
 /node_modules
 npm-debug.log

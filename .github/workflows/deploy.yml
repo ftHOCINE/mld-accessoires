@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Generate data from Excel
+        run: npm run generate:data
+
       - name: Build
         run: npx ng build --configuration production --base-href "/${{ github.event.repository.name }}/"
 
