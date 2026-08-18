@@ -4,11 +4,10 @@ import { Car } from '../../../core/models/car.model';
 import { StoreService } from '../../../core/services/store.service';
 
 @Component({
-  selector: 'app-car-card',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './car-card.component.html',
-  styleUrl: './car-card.component.css',
+    selector: 'app-car-card',
+    imports: [CommonModule],
+    templateUrl: './car-card.component.html',
+    styleUrl: './car-card.component.css'
 })
 export class CarCardComponent {
   @Input({ required: true }) car!: Car;

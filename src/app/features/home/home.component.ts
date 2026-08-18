@@ -5,10 +5,9 @@ import { PartsListComponent } from '../parts/parts-list/parts-list.component';
 import { ContactComponent } from '../contact/contact.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [HeroComponent, CarListComponent, PartsListComponent, ContactComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+    selector: 'app-home',
+    imports: [HeroComponent, CarListComponent, PartsListComponent, ContactComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css'
 })
 export class HomeComponent {}

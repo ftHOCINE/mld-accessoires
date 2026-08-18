@@ -6,11 +6,10 @@ import { CarService } from '../../../core/services/car.service';
 import { CarCardComponent } from '../car-card/car-card.component';
 
 @Component({
-  selector: 'app-car-list',
-  standalone: true,
-  imports: [CommonModule, FormsModule, CarCardComponent],
-  templateUrl: './car-list.component.html',
-  styleUrl: './car-list.component.css',
+    selector: 'app-car-list',
+    imports: [CommonModule, FormsModule, CarCardComponent],
+    templateUrl: './car-list.component.html',
+    styleUrl: './car-list.component.css'
 })
 export class CarListComponent {
   cars: Car[] = [];

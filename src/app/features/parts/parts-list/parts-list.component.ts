@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Part, PartCategory } from '../../../core/models/part.model';
 import { PartsService } from '../../../core/services/parts.service';
 import { PartCardComponent } from '../part-card/part-card.component';
 
 @Component({
-  selector: 'app-parts-list',
-  standalone: true,
-  imports: [CommonModule, PartCardComponent],
-  templateUrl: './parts-list.component.html',
-  styleUrl: './parts-list.component.css',
+    selector: 'app-parts-list',
+    imports: [PartCardComponent],
+    templateUrl: './parts-list.component.html',
+    styleUrl: './parts-list.component.css'
 })
 export class PartsListComponent {
   parts: Part[] = [];

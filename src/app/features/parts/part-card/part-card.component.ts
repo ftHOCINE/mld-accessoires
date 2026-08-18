@@ -4,11 +4,10 @@ import { Part } from '../../../core/models/part.model';
 import { StoreService } from '../../../core/services/store.service';
 
 @Component({
-  selector: 'app-part-card',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './part-card.component.html',
-  styleUrl: './part-card.component.css',
+    selector: 'app-part-card',
+    imports: [CommonModule],
+    templateUrl: './part-card.component.html',
+    styleUrl: './part-card.component.css'
 })
 export class PartCardComponent {
   @Input({ required: true }) part!: Part;
