@@ -1,6 +1,12 @@
 <article class="card flex flex-col h-full">
   <div class="relative">
-    <img [src]="part.imageUrl" [alt]="part.name" class="h-40 w-full object-cover" loading="lazy" />
+    <img
+      [src]="part.imageUrl || 'mld.jfif'"
+      [alt]="part.name"
+      class="h-40 w-full object-cover"
+      loading="lazy"
+      (error)="onImageError($event)"
+    />
     @if (part.installationAvailable) {
       <span class="badge absolute top-3 left-3 bg-primary-500/20 text-primary-300">Montage inclus</span>
     }

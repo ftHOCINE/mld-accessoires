@@ -1,6 +1,12 @@
 <article class="card flex flex-col h-full">
   <div class="relative">
-    <img [src]="car.imageUrl" [alt]="car.brand + ' ' + car.model" class="h-48 w-full object-cover" loading="lazy" />
+    <img
+      [src]="car.imageUrl || 'mld.jfif'"
+      [alt]="car.brand + ' ' + car.model"
+      class="h-48 w-full object-cover"
+      loading="lazy"
+      (error)="onImageError($event)"
+    />
     <span
       class="badge absolute top-3 left-3"
       [ngClass]="car.available ? 'bg-green-900/60 text-green-300' : 'bg-red-900/60 text-red-300'"

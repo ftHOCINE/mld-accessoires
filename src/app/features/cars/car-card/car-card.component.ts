@@ -2,6 +2,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Car } from '../../../core/models/car.model';
 import { StoreService } from '../../../core/services/store.service';
+import { onImageError } from '../../../shared/utils/image-fallback';
 
 @Component({
     selector: 'app-car-card',
@@ -12,6 +13,8 @@ import { StoreService } from '../../../core/services/store.service';
 })
 export class CarCardComponent {
   @Input({ required: true }) car!: Car;
+
+  readonly onImageError = onImageError;
 
   constructor(private store: StoreService) {}
 
