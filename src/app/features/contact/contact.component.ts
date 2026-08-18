@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { StoreService } from '../../core/services/store.service';
@@ -7,6 +7,7 @@ import { StoreService } from '../../core/services/store.service';
     selector: 'app-contact',
     imports: [],
     templateUrl: './contact.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './contact.component.css'
 })
 export class ContactComponent {

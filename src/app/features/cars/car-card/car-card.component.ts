@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Car } from '../../../core/models/car.model';
 import { StoreService } from '../../../core/services/store.service';
@@ -7,6 +7,7 @@ import { StoreService } from '../../../core/services/store.service';
     selector: 'app-car-card',
     imports: [CommonModule],
     templateUrl: './car-card.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './car-card.component.css'
 })
 export class CarCardComponent {

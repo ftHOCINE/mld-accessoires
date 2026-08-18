@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Part, PartCategory } from '../../../core/models/part.model';
 import { PartsService } from '../../../core/services/parts.service';
@@ -8,6 +8,7 @@ import { PartCardComponent } from '../part-card/part-card.component';
     selector: 'app-parts-list',
     imports: [PartCardComponent],
     templateUrl: './parts-list.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './parts-list.component.css'
 })
 export class PartsListComponent {

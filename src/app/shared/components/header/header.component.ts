@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { StoreService } from '../../../core/services/store.service';
 
@@ -6,6 +6,7 @@ import { StoreService } from '../../../core/services/store.service';
     selector: 'app-header',
     imports: [],
     templateUrl: './header.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './header.component.css'
 })
 export class HeaderComponent {

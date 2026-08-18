@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Car, CarCategory } from '../../../core/models/car.model';
@@ -9,6 +9,7 @@ import { CarCardComponent } from '../car-card/car-card.component';
     selector: 'app-car-list',
     imports: [CommonModule, FormsModule, CarCardComponent],
     templateUrl: './car-list.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './car-list.component.css'
 })
 export class CarListComponent {

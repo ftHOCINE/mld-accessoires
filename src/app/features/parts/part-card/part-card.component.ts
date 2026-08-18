@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Part } from '../../../core/models/part.model';
 import { StoreService } from '../../../core/services/store.service';
@@ -7,6 +7,7 @@ import { StoreService } from '../../../core/services/store.service';
     selector: 'app-part-card',
     imports: [CommonModule],
     templateUrl: './part-card.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './part-card.component.css'
 })
 export class PartCardComponent {
